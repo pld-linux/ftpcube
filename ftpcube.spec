@@ -2,7 +2,7 @@ Summary:	Multithreaded FTP client for X Window System
 Summary(pl):	Wielow±tkowy klient FTP dla systemu X Window
 Name:		ftpcube
 Version:	0.4.3
-Release:	2
+Release:	3
 License:	Artistic for code, GPL v2 for icons
 Group:		X11/Applications/Networking
 Source0:	http://dl.sourceforge.net/ftpcube/%{name}-%{version}.tar.gz
