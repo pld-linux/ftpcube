@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=FtpCube
+Comment=FtpCube FTP client
+Comment[pl]=FtpCube, klient FTP
+Exec=ftpcube
+Icon=ftpcube.png
+Terminal=0
+Type=Application
+Categories=Application;Network;
+# vi: encoding=utf-8
