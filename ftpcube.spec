@@ -1,11 +1,12 @@
 Summary:	Multithreaded FTP client for X Window
 Name:		ftpcube
 Version:	0.4.3
-Release:	1
+Release:	2
 License:	Artistic for code, GPL v2 for icons
 Group:		X11/Applications/Networking
 Source0:	http://dl.sourceforge.net/ftpcube/ftpcube-0.4.3.tar.gz
 # Source0-md5:	574d207377a24caf6315866d52326672
+Source1:	%{name}.desktop
 URL:		http://ftpcube.sourceforge.net/
 BuildRequires:	python
 Requires:	python-wxPython
@@ -38,6 +39,9 @@ python setup.py install \
 	--install-scripts=%{_bindir} \
         --root=$RPM_BUILD_ROOT
 
+install -D %{name}.xpm $RPM_BUILD_ROOT%{_iconsdir}/%{name}.xpm
+install -D %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -46,3 +50,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc README TODO CHANGELOG
 %attr(755,root,root) %{_bindir}/*
 %{py_sitedir}/libftpcube/
+%{_desktopdir}/*
+%{_iconsdir}/*
