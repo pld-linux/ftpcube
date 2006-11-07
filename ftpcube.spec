@@ -64,5 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc README TODO CHANGELOG
 %attr(755,root,root) %{_bindir}/*
 %{py_sitescriptdir}/libftpcube
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
