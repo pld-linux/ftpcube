@@ -1,5 +1,5 @@
 Summary:	Multithreaded FTP client for X Window System
-Summary(pl):	Wielow±tkowy klient FTP dla systemu X Window
+Summary(pl.UTF-8):   WielowÄ…tkowy klient FTP dla systemu X Window
 Name:		ftpcube
 Version:	0.4.3
 Release:	5
@@ -26,17 +26,17 @@ find a good, capable unix FTP client that offered an intuitive and
 sexy UI. Plus, I liked the idea of having an FTP client written in
 Python. So, voila FtpCube.
 
-%description -l pl
+%description -l pl.UTF-8
 FtpCube to wieloplatformowy, graficzny klient FTP napisany w Pythonie,
-u¿ywaj±cy biblioteki graficznej wxPython. Interfejs FtpCube jest
-oparty na LeechFTP Jana Debisa, ale kod zosta³ stworzony od pocz±tku i
-zawiera funkcjonalno¶æ przewy¿szaj±c± orygina³.
+uÅ¼ywajÄ…cy biblioteki graficznej wxPython. Interfejs FtpCube jest
+oparty na LeechFTP Jana Debisa, ale kod zostaÅ‚ stworzony od poczÄ…tku i
+zawiera funkcjonalnoÅ›Ä‡ przewyÅ¼szajÄ…cÄ… oryginaÅ‚.
 
-FtpCube ma zapewniæ wysokiej jako¶ci interfejs u¿ytkownika, a tak¿e
-bogaty zbiór mo¿liwo¶ci. Projekt FtpCube narodzi³ siê z poszukiwañ
-dobrego, uniksowego klienta FTP o du¿ych mo¿liwo¶ciach, oferuj±cego
-intuicyjny i seksowny interfejs. Autorowi spodoba³a siê idea klienta
-FTP napisanego w Pythonie. Tak wiêc, voila FtpCube.
+FtpCube ma zapewniÄ‡ wysokiej jakoÅ›ci interfejs uÅ¼ytkownika, a takÅ¼e
+bogaty zbiÃ³r moÅ¼liwoÅ›ci. Projekt FtpCube narodziÅ‚ siÄ™ z poszukiwaÅ„
+dobrego, uniksowego klienta FTP o duÅ¼ych moÅ¼liwoÅ›ciach, oferujÄ…cego
+intuicyjny i seksowny interfejs. Autorowi spodobaÅ‚a siÄ™ idea klienta
+FTP napisanego w Pythonie. Tak wiÄ™c, voila FtpCube.
 
 %prep
 %setup -q
