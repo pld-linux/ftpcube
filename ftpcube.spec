@@ -1,5 +1,5 @@
 Summary:	Multithreaded FTP client for X Window System
-Summary(pl.UTF-8):   Wielowątkowy klient FTP dla systemu X Window
+Summary(pl.UTF-8):	Wielowątkowy klient FTP dla systemu X Window
 Name:		ftpcube
 Version:	0.4.3
 Release:	5
