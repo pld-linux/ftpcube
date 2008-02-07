@@ -22,7 +22,7 @@ and includes functionality that surpasses the original LeechFTP.
 
 FtpCube aims to provide a high quality user interface, as well as a
 rich feature set. The FtpCube project was born out of my search to
-find a good, capable unix FTP client that offered an intuitive and
+find a good, capable Unix FTP client that offered an intuitive and
 sexy UI. Plus, I liked the idea of having an FTP client written in
 Python. So, voila FtpCube.
 
