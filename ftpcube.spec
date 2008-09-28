@@ -8,11 +8,12 @@ Group:		X11/Applications/Networking
 Source0:	http://dl.sourceforge.net/ftpcube/%{name}-%{version}.tar.gz
 # Source0-md5:	3eb93ae44fa552ec50a24b7882198dd1
 Source1:	%{name}.desktop
-Patch0:		%{name}-prog-icon.patch
 URL:		http://ftpcube.sourceforge.net/
 BuildRequires:	python
 %pyrequires_eq	python-libs
+BuildRequires:	python-wxPython
 Requires:	python-wxPython
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -41,25 +42,23 @@ FTP napisanego w Pythonie. Tak więc, voila FtpCube.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-python setup.py build
 # Extracting program icon from .py
-python libftpcube/icons/%{name}2.py > %{name}.xpm
-rm -f libftpcube/icons/%{name}2.py
+%{__python} -c "import libftpcube.icons.ftpcube; print libftpcube.icons.ftpcube.getData()" > %{name}.png
+%{__python} setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-python setup.py install \
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
+%{__python} setup.py install \
 	--optimize=2 \
 	--prefix=%{_prefix} \
 	--install-scripts=%{_bindir} \
 	--root=$RPM_BUILD_ROOT
 
-install -D %{name}.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.xpm
-install -D %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
+cp -a %{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}
+cp -a %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
