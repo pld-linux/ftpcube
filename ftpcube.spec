@@ -45,7 +45,7 @@ FTP napisanego w Pythonie. Tak więc, voila FtpCube.
 
 %build
 # Extracting program icon from .py
-%{__python} -c "import libftpcube.icons.ftpcube; print libftpcube.icons.ftpcube.getData()" > %{name}.png
+%{__python} -c "import libftpcube.icons.ftpcube as icon; print icon.getData()" > %{name}.png
 %{__python} setup.py build
 
 %install
