@@ -10,8 +10,9 @@ Source0:	http://dl.sourceforge.net/ftpcube/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 URL:		http://ftpcube.sourceforge.net/
 BuildRequires:	python
-%pyrequires_eq	python-libs
 BuildRequires:	python-wxPython
+BuildRequires:	rpm-pythonprov
+%pyrequires_eq	python-libs
 Requires:	python-wxPython
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -68,5 +69,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc README CHANGELOG COPYING COPYING.ICONS
 %attr(755,root,root) %{_bindir}/*
 %{py_sitescriptdir}/libftpcube
-%{_desktopdir}/*.desktop
-%{_pixmapsdir}/*
+%{_desktopdir}/ftpcube.desktop
+%{_pixmapsdir}/ftpcube.png
