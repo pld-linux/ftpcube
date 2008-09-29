@@ -9,9 +9,10 @@ Source0:	http://dl.sourceforge.net/ftpcube/%{name}-%{version}.tar.gz
 # Source0-md5:	3eb93ae44fa552ec50a24b7882198dd1
 Source1:	%{name}.desktop
 URL:		http://ftpcube.sourceforge.net/
-BuildRequires:	python
+BuildRequires:	python >= 1:2.5
 BuildRequires:	python-wxPython
 BuildRequires:	rpm-pythonprov
+BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-libs
 Requires:	python-wxPython
 BuildArch:	noarch
@@ -61,13 +62,16 @@ install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 cp -a %{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}
 cp -a %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
+%py_postclean
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc README CHANGELOG COPYING COPYING.ICONS
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/ftpcube
 %{py_sitescriptdir}/libftpcube
+%{py_sitescriptdir}/ftpcube-*.egg-info
 %{_desktopdir}/ftpcube.desktop
 %{_pixmapsdir}/ftpcube.png
