@@ -12,7 +12,7 @@ URL:		http://ftpcube.sourceforge.net/
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-wxPython
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 %pyrequires_eq	python-libs
 Requires:	python-wxPython
 BuildArch:	noarch
